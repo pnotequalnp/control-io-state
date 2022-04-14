@@ -1,0 +1,34 @@
+cabal-version: 2.4
+name:          control-io-state
+version:       0.1.0.0
+synopsis:      Stateful Operations with IORefs
+description:
+  Using implicit parameters and IORefs to provide a `MonadState`-like experience.
+
+category:      Control
+license:       ISC
+license-file:  LICENSE
+homepage:      https://github.com/pnotequalnp/control-io-state
+bug-reports:   https://github.com/pnotequalnp/control-io-state/issues
+author:        Kevin Mullins
+maintainer:    kevin@pnotequalnp.com
+copyright:     Kevin Mullins 2022
+
+source-repository head
+  type:     git
+  location: https://github.com/pnotequalnp/control-io-state
+
+library
+  hs-source-dirs:     src
+  default-language:   Haskell2010
+  default-extensions:
+    ConstraintKinds
+    ImplicitParams
+    RankNTypes
+
+  ghc-options:
+    -Wall -Wcompat -Werror=incomplete-patterns
+    -fno-show-valid-hole-fits
+
+  exposed-modules:    Control.IO.State
+  build-depends:      base ^>=4.14
